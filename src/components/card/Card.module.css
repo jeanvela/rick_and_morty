@@ -1,0 +1,36 @@
+.divContainer {
+    margin: 20px 0px 50px 0px;    
+    width: 350px;
+    padding: 10px 0px;
+    background-color: #000;
+    border: 1px solid black;
+    -webkit-box-shadow: 18px 21px 14px 0px rgba(0,0,0,0.88);
+    -moz-box-shadow: 18px 21px 14px 0px rgba(0,0,0,0.88);
+    box-shadow: 18px 21px 14px 0px rgba(0,0,0,0.88);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.btn {
+    width: 50%;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.btn:hover {
+    background: red;
+    transition: all 0.7s ease;    
+}
+
+h2 {
+    font-size: 22px;
+    width: 100%;
+}
+
+.imagen {
+    border-radius: 10px;
+}

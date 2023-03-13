@@ -1,0 +1,7 @@
+.divContainer {
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
