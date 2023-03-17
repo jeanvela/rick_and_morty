@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios"
+import { NavLink } from "react-router-dom";
 
 const Detail = () => {
 
@@ -18,26 +19,12 @@ const Detail = () => {
     )
   },[id])
 
-  // useEffect(() => {
-  //   const URL_BASE = "https://be-a-rym.up.railway.app/api"
-  //   const KEY = "b602bc6bb281.f1db9a9024056237f9a0"
-  //   fetch(`${URL_BASE}/character/${detailId}?key=${KEY}`)
-  //   .then((response) => response.json())
-  //   .then((char) => {
-  //     if (char.name) {
-  //       setCharacter(char);
-  //     } else {
-  //       window.alert("No hay personajes con ese ID");
-  //     }
-  //   })
-  //   .catch((err) => {
-  //    window.alert("No hay personajes con ese ID");
-  //   });
-  //   return setCharacter({});
-  // }, []);
-
   return (
       <div>
+        <NavLink to="/home">
+          <button>Volver</button>
+        </NavLink>
+        
           {character.name ? (
               <div>
                   <h1>{character.name}</h1>

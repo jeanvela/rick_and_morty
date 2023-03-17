@@ -16,6 +16,9 @@ function Nav (props) {
             <Link to="/About">
                 <p>About</p>
             </Link>
+            <Link to="/favorites">
+                <p>Favorites</p>
+            </Link>
             </nav>
         </div>
     )
