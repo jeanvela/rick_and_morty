@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios"
 import { NavLink } from "react-router-dom";
+import style from './Detail.module.css'
 
 const Detail = () => {
 
@@ -20,19 +21,24 @@ const Detail = () => {
   },[id])
 
   return (
-      <div>
-        <NavLink to="/home">
-          <button>Volver</button>
-        </NavLink>
-        
+      <div className={style.container}>
+        <div className={style.containerBtn}>
+          <NavLink to="/home" >
+            <button className={style.btn}>Volver</button>
+          </NavLink>
+        </div>
           {character.name ? (
-              <div>
-                  <h1>{character.name}</h1>
-                  <h2>{character.status}</h2>
-                  <h2>{character.species}</h2>
-                  <h2>{character.gender}</h2>
-                  <h2>{character.origin.name}</h2>
+              <div className={style.containerChar}>
+                <div>
+                  <h1>Nombre: {character.name}</h1>
+                  <h2>Estado: {character.status}</h2>
+                  <h2>Especie: {character.species}</h2>
+                  <h2>Genero: {character.gender}</h2>
+                  <h2>Origen:{character.origin.name}</h2>
+                </div>
+                <div>
                   <img src={character.image} alt="" />
+                </div>
               </div>
           ) : (
               <h3>loading</h3>

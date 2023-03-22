@@ -1,0 +1,51 @@
+.form {
+    /* background: ; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    /* padding: 20px 0; */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.input {
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 3px solid green;
+    font-weight: 700;
+}
+
+.errors {
+    color: red;
+    font-weight: 700;
+}
+
+.btn {
+    width: 15%;
+    border: none;
+    padding: 5px 0;
+    border-radius: 10px;
+    background: blue;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: green;
+    transition: all 0.5s ease;
+}

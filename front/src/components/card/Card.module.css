@@ -9,6 +9,8 @@
     box-shadow: 18px 21px 14px 0px rgba(0,0,0,0.88);
     border-radius: 10px;
     color: #fff;
+    text-align: center;
+    position: relative;
 }
 
 .btn {
@@ -33,4 +35,14 @@ h2 {
 
 .imagen {
     border-radius: 10px;
+}
+
+.cora {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 20%;
+    padding: 4px 0;
+    font-size: 20px;
 }

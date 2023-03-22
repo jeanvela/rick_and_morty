@@ -5,22 +5,20 @@ import { Link } from "react-router-dom"
 
 function Nav (props) {
     return (
-        <div className={style.divContainer}>
-            <nav className={style.navbar}>
+        <nav className={style.navbar}>
+            <Link to="/Home" className={style.link}>
+                <p>Home</p>
+            </Link>
+            <Link to="/About" className={style.link}>
+                <p>About</p>
+            </Link>
+            <Link to="/favorites" className={style.link}>
+                <p>Favorites</p>
+            </Link>
             <SearchBar 
                 onSearch={props.onSearch}
             />
-            <Link to="/Home">
-                <p>Home</p>
-            </Link>
-            <Link to="/About">
-                <p>About</p>
-            </Link>
-            <Link to="/favorites">
-                <p>Favorites</p>
-            </Link>
-            </nav>
-        </div>
+        </nav>
     )
 }
 

@@ -64,10 +64,11 @@ function App () {
       characters.filter(char => char.id !== id)
     )
   }
-
+// className='App'
   return (
-    <div className='App' style={{ padding: '25px' }}>
-      
+    
+    <div className={pathname === '/' ? 'App2' : 'App'}> 
+      <>
       {pathname !=='/' && <Nav onSearch={onSearch} />}
       <Routes>
         <Route path='/' element={<Form login={login}/>}/>
@@ -75,7 +76,7 @@ function App () {
         <Route path='/about' element={<About/>}/>
         <Route path='/favorites' element={<Favorites/>}/>
         <Route path='/detail/:id' element={<Detail/>}/>
-      </Routes>
+      </Routes></>
     </div>
   );
 }
