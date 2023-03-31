@@ -4,10 +4,16 @@ import { connect } from "react-redux";
 import { agregarPersonaje, eliminarPersonaje } from "../redux/actions";
 import { useState } from "react";
 import { useEffect } from "react";
+// import axios from 'axios'
 
-function Card({id,name,species,gender,image,onClose,agregarPersonaje,eliminarPersonaje,myFavorites}) { 
+function Card({id,name,species,gender,image,onClose,agregarPersonaje,eliminarPersonaje,myFavorites}) { //agregarPersonaje
 
    const [isFav,setIsFav] = useState(false)
+
+   // const agregarPersonaje = (personaje) => {
+   //    axios.post('http://localhost:3001/rickandmorty/fav',personaje)
+   //    .then(response => console.log('ok'))
+   // }
 
    const handleFavorite = () => {
       if (isFav) {

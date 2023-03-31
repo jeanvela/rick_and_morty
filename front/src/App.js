@@ -42,12 +42,13 @@ function App () {
   const [characters,setCharacters] = useState([])
 
   const onSearch = (id) => {
-    const URL_BASE = "https://be-a-rym.up.railway.app/api"
-    const KEY = "b602bc6bb281.f1db9a9024056237f9a0"
+    // const URL_BASE = "https://be-a-rym.up.railway.app/api";
+    // const KEY = "b602bc6bb281.f1db9a9024056237f9a0";
+    const URL_BASE = 'http://localhost:3001'
 
     if (characters.find((char) => char.id === id)) return alert("Personaje repetido")
-
-    fetch(`${URL_BASE}/character/${id}?key=${KEY}`)
+    // fetch(`${URL_BASE}/character/${id}?key=${KEY}`)
+    fetch(`${URL_BASE}/onsearch/${id}`)
     .then(response => response.json())
     .then(data => {
       if (data.name) {
@@ -57,14 +58,14 @@ function App () {
         alert("personaje no encontrado")
       }
     })
-  }
+  };
   
   const onClose = (id) => {
     setCharacters(
       characters.filter(char => char.id !== id)
     )
-  }
-// className='App'
+  };
+
   return (
     
     <div className={pathname === '/' ? 'App2' : 'App'}> 

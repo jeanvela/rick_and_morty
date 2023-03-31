@@ -1,10 +1,13 @@
-const http = require('http')
-const characters = require('./utils/data.js')
+const express = require('express')
+const server = express()
+const router = require('./routes')
+const cors = require('cors')
 
-http.createServer((req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    if (req.url.includes('rickandmorty/character')) {
-        res.writeHead(200,{'content': 'text-Type'})
-        res.end()
-    }
-}).listen(3001,'localhost')
+const PORT = 3001
+server.use(cors())
+server.use(express.json())
+server.use('/',router)
+
+server.listen(PORT, () => {
+    console.log('Server raised in port' + PORT)
+})

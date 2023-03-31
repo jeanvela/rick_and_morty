@@ -12,12 +12,15 @@ const Detail = () => {
   const [character,setCharacter] = useState({})
 
   useEffect(() => {
-    const URL_BASE = "https://be-a-rym.up.railway.app/api"
-    const KEY = "b602bc6bb281.f1db9a9024056237f9a0"
+    // const URL_BASE = "https://be-a-rym.up.railway.app/api"
+    // const KEY = "b602bc6bb281.f1db9a9024056237f9a0"
+    const URL = 'http://localhost:3001'
 
-    axios(`${URL_BASE}/character/${id}?key=${KEY}`).then((response) =>
-      setCharacter(response.data)
-    )
+    axios(`${URL}/detail/${id}`)
+    .then((response) => setCharacter(response.data))
+    .catch(err => {
+      alert('algo esta fallando')
+    })
   },[id])
 
   return (
@@ -34,7 +37,7 @@ const Detail = () => {
                   <h2>Estado: {character.status}</h2>
                   <h2>Especie: {character.species}</h2>
                   <h2>Genero: {character.gender}</h2>
-                  <h2>Origen:{character.origin.name}</h2>
+                  <h2>Origen: {character.origin}</h2>
                 </div>
                 <div>
                   <img src={character.image} alt="" />
